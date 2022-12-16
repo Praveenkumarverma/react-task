@@ -1,23 +1,25 @@
-import logo from './logo.svg';
+import React from 'react';
+import { useRoutes } from 'react-router-dom';
 import './App.css';
+// import CreateQuote from './components/CreateQuote';
+// import Home from './components/Home';
+// import Login from './components/Login';
+import NavBar from './components/NavBar';
+// import Profile from './components/Profile';
+// import Signup from './components/SignUp';
+import {routes} from './routes';
 
 function App() {
+const element = useRoutes(routes)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div >
+      <NavBar/>
+      {element}
+      {/* <Login/> */}
+      {/* <Signup/> */}
+      {/* <Profile/> */}
+      {/* <CreateQuote/> */}
+      {/* <Home/> */}
     </div>
   );
 }
